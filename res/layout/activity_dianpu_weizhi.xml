@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="登记"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/text_bg1" />
+    
+    <Button
+        android:id="@+id/back"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/view_title"
+        android:layout_alignBottom="@+id/view_title"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:text="返回" />
+    
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapsView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/back"
+        android:layout_marginTop="10dp"
+        android:clickable="true" />
+
+    <Button
+        android:id="@+id/submit"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/view_title"
+        android:layout_alignBottom="@+id/view_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:text="标记/签到" />
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <Button
+            android:id="@+id/dianpuweizhi"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/wodeweizhi"
+            android:layout_alignBottom="@+id/wodeweizhi"
+            android:layout_alignParentRight="true"
+            android:text="店铺位置" />
+
+        <Button
+            android:id="@+id/wodeweizhi"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="我的位置" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

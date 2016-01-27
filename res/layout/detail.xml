@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="明细"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/text_bg1" />
+    
+    <Button
+        android:id="@+id/back"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/view_title"
+        android:layout_alignBottom="@+id/view_title"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:text="返回" />
+    
+    <HorizontalScrollView
+        android:id="@+id/container2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/back"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/data_bg" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:id="@+id/head"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dip"
+                        android:background="@color/title_cell"
+                        android:gravity="center_horizontal"
+                        android:text="主条码"
+                        android:textColor="@color/text_bg1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dip"
+                        android:background="@color/title_cell"
+                        android:gravity="center_horizontal"
+                        android:text="商品名称"
+                        android:textColor="@color/text_bg1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="1dip"
+                        android:background="@color/title_cell"
+                        android:gravity="center_horizontal"
+                        android:text="发货数量"
+                        android:textColor="@color/text_bg1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="1dip"
+                        android:background="@color/title_cell"
+                        android:gravity="center_horizontal"
+                        android:text="订货数量"
+                        android:textColor="@color/text_bg1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="1dip"
+                        android:background="@color/title_cell"
+                        android:gravity="center_horizontal"
+                        android:text="当前可配"
+                        android:textColor="@color/text_bg1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="1dip"
+                        android:background="@color/title_cell"
+                        android:gravity="center_horizontal"
+                        android:text="商品编码"
+                        android:textColor="@color/text_bg1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="1dip"
+                        android:background="@color/title_cell"
+                        android:gravity="center_horizontal"
+                        android:text="规格型号"
+                        android:textColor="@color/text_bg1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="1dip"
+                        android:background="@color/title_cell"
+                        android:gravity="center_horizontal"
+                        android:text="单位"
+                        android:textColor="@color/text_bg1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="1dip"
+                        android:background="@color/title_cell"
+                        android:gravity="center_horizontal"
+                        android:text="内核数"
+                        android:textColor="@color/text_bg1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="1dip"
+                        android:background="@color/title_cell"
+                        android:gravity="center_horizontal"
+                        android:text="审核数量"
+                        android:textColor="@color/text_bg1"
+                        android:textStyle="bold" />
+
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/cells"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:layout_marginBottom="1dip"
+                android:layout_marginTop="1dip"
+                android:orientation="vertical" >
+
+            </LinearLayout>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

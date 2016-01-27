@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+	<TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/strname"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="1dip"
+            android:background="@color/data_cell"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="shop"
+            android:textColor="@color/text_bg1" />
+
+        <TextView
+            android:id="@+id/billcount"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="1dip"
+            android:background="@color/data_cell"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="num"
+            android:textColor="@color/text_bg1" >
+</TextView>
+    </TableRow>
+</TableLayout>

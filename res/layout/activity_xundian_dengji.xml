@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="登记"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/text_bg1" />
+    
+    <Button
+        android:id="@+id/back"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/view_title"
+        android:layout_alignBottom="@+id/view_title"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:text="返回" />
+    
+    <com.baidu.mapapi.map.MapView
+			        android:id="@+id/bmapsView"
+			        android:layout_width="fill_parent"
+			        android:layout_height="200dp"
+			        android:layout_marginTop="10dp"
+			        android:layout_below="@+id/back"
+			        android:clickable="true" />
+	
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/bmapsView"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="130dp" >
+                
+			    <EditText
+			        android:id="@+id/plu_no"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignBaseline="@+id/textView1"
+			        android:layout_alignBottom="@+id/textView1"
+			        android:layout_marginLeft="15dp"
+			        android:layout_marginRight="15dp"
+			        android:layout_toRightOf="@+id/textView1"
+			        android:ems="10"
+			        android:enabled="false"
+			        android:focusable="false"
+			        android:focusableInTouchMode="false"
+			        android:inputType="textPersonName"
+			        android:text="提交人" >
+
+			    </EditText>
+			
+			    <EditText
+			        android:id="@+id/plu_name"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignBaseline="@+id/o_num"
+			        android:layout_alignBottom="@+id/o_num"
+			        android:layout_alignLeft="@+id/plu_no"
+			        android:layout_alignParentRight="true"
+			        android:layout_marginRight="15dp"
+			        android:ems="10"
+			        android:enabled="false"
+			        android:focusable="false"
+			        android:focusableInTouchMode="false"
+			        android:inputType="datetime"
+			        android:text="2014/03/11 11:20:30" >
+
+			    </EditText>
+			
+			    <TextView
+			        android:id="@+id/o_num"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignLeft="@+id/textView1"
+			        android:layout_below="@+id/plu_no"
+			        android:layout_marginTop="30dp"
+			        android:text="时间"
+			        android:textAppearance="?android:attr/textAppearanceLarge"
+			        android:textColor="@color/text_bg1" />
+
+			    <TextView
+			        android:id="@+id/textView1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_marginLeft="15dp"
+			        android:layout_marginTop="15dp"
+			        android:text="提交人"
+			        android:textAppearance="?android:attr/textAppearanceLarge"
+			        android:textColor="@color/text_bg1" />
+
+			</RelativeLayout>
+   </ScrollView>
+
+    <Button
+        android:id="@+id/submit"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/view_title"
+        android:layout_alignBottom="@+id/view_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:text="提交" />
+
+</RelativeLayout>
